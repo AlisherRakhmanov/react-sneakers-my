@@ -1,0 +1,9 @@
+.catalog {
+	&.vertical {
+		@apply flex flex-col;
+	}
+
+	&.horizontal {
+		@apply flex flex-wrap;
+	}
+}

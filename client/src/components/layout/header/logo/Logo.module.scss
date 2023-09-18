@@ -1,0 +1,14 @@
+.logo {
+	@apply flex items-center gap-4;
+
+	.title {
+		> h1 {
+			@apply text-lg font-bold uppercase text-black;
+			line-height: normal;
+		}
+
+		> p {
+			@apply text-sm text-gray-200;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.heading {
+	@apply flex items-center text-2xl font-bold;
+	line-height: normal;
+
+	.backLink {
+		@apply border-gray-500 mr-4 rounded-lg border;
+
+		> svg {
+			@apply text-gray-400;
+		}
+	}
+}

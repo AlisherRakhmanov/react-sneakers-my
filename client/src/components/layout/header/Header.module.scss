@@ -1,0 +1,7 @@
+.header {
+	@apply flex items-center justify-between py-10;
+
+	.menu {
+		@apply flex items-center gap-10;
+	}
+}

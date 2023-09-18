@@ -1,0 +1,14 @@
+.cart {
+	.button {
+		@apply flex items-center gap-2;
+
+		> svg {
+			@apply text-gray-400;
+			display: inline;
+		}
+
+		> span {
+			@apply text-gray-400;
+		}
+	}
+}

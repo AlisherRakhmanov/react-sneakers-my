@@ -1,0 +1,8 @@
+.auth {
+	button {
+		> svg {
+			@apply text-gray-400;
+			display: inline;
+		}
+	}
+}
