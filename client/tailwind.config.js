@@ -16,6 +16,11 @@ export default {
 				500: '#C8C8C8',
 				600: '#F3F3F3'
 			},
+			green: {
+				100: '#A5D364',
+				200: '#96bc60'
+			},
+			red: '#D80032',
 			transparent: colors.transparent
 		},
 

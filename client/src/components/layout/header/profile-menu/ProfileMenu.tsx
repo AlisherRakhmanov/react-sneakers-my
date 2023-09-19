@@ -4,16 +4,17 @@ import { MdOutlinePerson } from 'react-icons/md';
 import { useAuth } from '../../../../hooks/useAuth';
 import { useOutside } from '../../../../hooks/useOutside';
 
-import styles from './Profile.module.scss';
+import styles from './ProfileMenu.module.scss';
 import AuthForm from './auth-form/AuthForm';
+import ProfileButtons from './profile-buttons/ProfileButtons';
 
-const Profile: FC = () => {
-	const { isAuth } = useAuth();
+const ProfileMenu: FC = () => {
+	const { user } = useAuth();
 	const { isShow, setIsShow, ref } = useOutside(false);
 
 	return (
 		<div className={styles.profile} ref={ref}>
-			{isAuth ? (
+			{user ? (
 				<button onClick={() => setIsShow(!isShow)}>
 					<MdOutlinePerson size={25} />
 				</button>
@@ -21,9 +22,9 @@ const Profile: FC = () => {
 				<AuthForm />
 			)}
 
-			{isShow && <div>Show</div>}
+			{isShow && <ProfileButtons />}
 		</div>
 	);
 };
 
-export default Profile;
+export default ProfileMenu;

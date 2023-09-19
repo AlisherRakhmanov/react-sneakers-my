@@ -1,9 +1,7 @@
 .catalog {
-	&.vertical {
-		@apply flex flex-col;
-	}
+	@apply flex animate-fade flex-wrap justify-between gap-x-5 gap-y-10 pt-8;
 
-	&.horizontal {
-		@apply flex flex-wrap;
+	.notfound {
+		@apply mt-10 text-3xl font-semibold;
 	}
 }

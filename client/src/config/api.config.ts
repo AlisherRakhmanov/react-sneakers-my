@@ -1,10 +1,8 @@
 export const API_URL = 'http://localhost:8000/api';
 
 export const getProductsApi = (string: string) =>
-	`http://localhost:8000/api/product/${string}`;
+	`${API_URL}/product/${string}`;
 
-export const getAuthApi = (string: string) =>
-	`http://localhost:8000/api/auth/${string}`;
+export const getAuthApi = (string: string) => `${API_URL}/auth/${string}`;
 
-export const getUserApi = (string: string) =>
-	`http://localhost:8000/api/user/${string}`;
+export const getUserApi = (string: string) => `${API_URL}/user/${string}`;

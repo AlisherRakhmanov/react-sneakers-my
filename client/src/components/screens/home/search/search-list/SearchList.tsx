@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { getProductsUrl } from '../../../../../config/url.config';
 import { IProduct } from '../../../../../types/product.types';
+import { priceToCurrency } from '../../../../../utils/priceToCurrency';
 
 import styles from './SearchList.module.scss';
 
@@ -20,7 +21,7 @@ const SearchList: FC<{ products: IProduct[] }> = ({ products }) => {
 						/>
 						<div className={styles.info}>
 							<h3>{product.title}</h3>
-							<p>{product.price}</p>
+							<p>{priceToCurrency(product.price)}</p>
 						</div>
 					</Link>
 				))

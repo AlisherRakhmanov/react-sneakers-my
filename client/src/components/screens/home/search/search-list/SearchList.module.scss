@@ -1,5 +1,5 @@
 .list {
-	@apply bg-gray-600 absolute z-10 w-full rounded-xl px-2;
+	@apply absolute z-10 w-full animate-fade rounded-xl bg-gray-600 px-2;
 	top: calc(100% + 15px);
 
 	.item {
@@ -10,6 +10,10 @@
 
 			> h3 {
 				@apply w-32 truncate;
+			}
+
+			> p {
+				@apply font-semibold;
 			}
 		}
 	}

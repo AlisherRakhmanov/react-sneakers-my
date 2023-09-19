@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { MdOutlineShoppingCart } from 'react-icons/md';
 
 import { useOutside } from '../../../../hooks/useOutside';
+import { priceToCurrency } from '../../../../utils/priceToCurrency';
 
 import styles from './Cart.module.scss';
 
@@ -13,7 +14,7 @@ const Cart: FC = () => {
 		<div className={styles.cart} ref={ref}>
 			<button className={styles.button} onClick={() => setIsShow(!isShow)}>
 				<MdOutlineShoppingCart size={25} />
-				<span>1000 $</span>
+				<span>{priceToCurrency(1000)}</span>
 			</button>
 
 			{isShow && (

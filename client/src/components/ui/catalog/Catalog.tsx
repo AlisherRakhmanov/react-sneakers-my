@@ -1,4 +1,3 @@
-import cn from 'clsx';
 import { FC } from 'react';
 
 import { IProduct } from '../../../types/product.types';
@@ -6,23 +5,16 @@ import { IProduct } from '../../../types/product.types';
 import styles from './Catalog.module.scss';
 import CatalogItem from './catalog-item/CatalogItem';
 
-interface ICatalog {
-	products: IProduct[];
-	variant: 'horizontal' | 'vertical';
-}
-
-const Catalog: FC<ICatalog> = ({ products, variant }) => {
+const Catalog: FC<{ products: IProduct[] }> = ({ products }) => {
 	return (
-		<div
-			className={cn(styles.catalog, {
-				[styles.horizontal]: variant === 'horizontal',
-				[styles.vertical]: variant === 'vertical'
-			})}
-		>
-			{products.length &&
+		<div className={styles.catalog}>
+			{products.length ? (
 				products.map(product => (
 					<CatalogItem key={product._id} product={product} />
-				))}
+				))
+			) : (
+				<p className={styles.notfound}>Нечего не найдено</p>
+			)}
 		</div>
 	);
 };

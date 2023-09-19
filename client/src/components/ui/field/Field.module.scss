@@ -1,0 +1,15 @@
+.field {
+	@apply relative;
+
+	> input {
+		@apply mb-5 rounded-xl border border-[#B4B4B3] bg-transparent py-1 pl-3 text-gray-200 outline-none;
+
+		&:focus-within {
+			@apply border-[#7D7C7C];
+		}
+	}
+
+	.error {
+		@apply text-red absolute bottom-0 left-0 text-xs;
+	}
+}

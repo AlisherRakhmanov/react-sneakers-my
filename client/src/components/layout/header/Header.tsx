@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import styles from './Header.module.scss';
 import Cart from './cart/Cart';
-import Favorite from './favorite/Favorite';
+import FavoriteMenu from './favorite-menu/FavoriteMenu';
 import Logo from './logo/Logo';
-import Profile from './profile/Profile';
+import ProfileMenu from './profile-menu/ProfileMenu';
 
 const Header: FC = () => {
 	return (
@@ -12,8 +12,8 @@ const Header: FC = () => {
 			<Logo />
 			<div className={styles.menu}>
 				<Cart />
-				<Favorite />
-				<Profile />
+				<FavoriteMenu />
+				<ProfileMenu />
 			</div>
 		</header>
 	);

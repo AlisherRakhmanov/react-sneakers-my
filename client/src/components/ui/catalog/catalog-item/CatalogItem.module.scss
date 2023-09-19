@@ -1,0 +1,39 @@
+.item {
+	@apply relative rounded-3xl border border-gray-600 px-5 pb-5;
+	width: 210px;
+
+	> a {
+		> h3 {
+			@apply truncate;
+		}
+	}
+
+	.info {
+		@apply flex items-center justify-between pt-3;
+
+		.price {
+			@apply text-left;
+
+			> p {
+				@apply text-xs text-gray-300;
+			}
+		}
+	}
+
+	.plus {
+		@apply rounded-lg border border-gray-600 p-1;
+		> svg {
+			@apply fill-gray-300;
+		}
+	}
+
+	.favorite {
+		@apply absolute left-6 top-3 p-1;
+	}
+
+	&:hover {
+		@apply transition-transform;
+		transform: scale(1.05);
+		box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.05);
+	}
+}

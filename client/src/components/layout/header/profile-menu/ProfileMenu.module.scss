@@ -1,4 +1,6 @@
 .profile {
+	@apply relative;
+
 	button {
 		> svg {
 			@apply text-gray-400;

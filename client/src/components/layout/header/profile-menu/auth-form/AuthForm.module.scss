@@ -1,0 +1,27 @@
+.auth {
+	@apply relative;
+
+	button {
+		> svg {
+			@apply text-gray-400;
+			display: inline;
+		}
+	}
+
+	.form {
+		@apply absolute right-0 z-10 animate-fade rounded-lg bg-gray-600 p-3;
+		top: calc(100% + 15px);
+
+		.buttons {
+			@apply flex flex-col items-center;
+
+			.button {
+				@apply mt-2 text-xs text-[#26577C] underline transition-colors;
+
+				&:hover {
+					@apply text-[#3085C3];
+				}
+			}
+		}
+	}
+}

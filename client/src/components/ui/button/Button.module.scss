@@ -1,0 +1,7 @@
+.button {
+	@apply bg-green-100 rounded-2xl px-14 py-2 text-white transition-colors;
+
+	&:hover {
+		@apply bg-green-200;
+	}
+}
