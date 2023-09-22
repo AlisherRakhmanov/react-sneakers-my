@@ -1,0 +1,29 @@
+.item {
+	@apply flex animate-fade items-center justify-between rounded-3xl border border-gray-100 p-3;
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+	box-shadow: -10px 4px 24px 0px rgba(0, 0, 0, 0.1);
+
+	> img {
+		@apply mr-2;
+	}
+
+	.info {
+		@apply w-44;
+
+		> h3 {
+			@apply truncate;
+		}
+
+		> p {
+			@apply mt-1;
+		}
+	}
+
+	.delete {
+		> svg {
+			@apply fill-red;
+		}
+	}
+}

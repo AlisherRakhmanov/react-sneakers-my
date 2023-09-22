@@ -12,3 +12,19 @@
 		}
 	}
 }
+
+.drawer {
+	@apply p-5;
+	width: 350px;
+
+	.top {
+		@apply mb-5 flex items-center justify-between;
+		> h1 {
+			@apply text-2xl font-bold;
+		}
+
+		> button {
+			@apply rounded-lg border border-gray-100 p-1;
+		}
+	}
+}

@@ -29,6 +29,11 @@
 
 	.favorite {
 		@apply absolute left-6 top-3 p-1;
+		&.active {
+			> svg {
+				@apply fill-red;
+			}
+		}
 	}
 
 	&:hover {

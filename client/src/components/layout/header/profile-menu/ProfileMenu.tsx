@@ -22,7 +22,7 @@ const ProfileMenu: FC = () => {
 				<AuthForm />
 			)}
 
-			{isShow && <ProfileButtons />}
+			{isShow && <ProfileButtons setIsShow={setIsShow} />}
 		</div>
 	);
 };

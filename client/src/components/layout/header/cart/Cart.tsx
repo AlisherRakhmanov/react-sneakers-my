@@ -1,20 +1,23 @@
 import Drawer from '@mui/material/Drawer';
-import { FC } from 'react';
-import { MdOutlineShoppingCart } from 'react-icons/md';
+import { FC, useState } from 'react';
+import { MdClose, MdOutlineShoppingCart } from 'react-icons/md';
 
-import { useOutside } from '../../../../hooks/useOutside';
+import { useCart } from '../../../../hooks/useCart';
 import { priceToCurrency } from '../../../../utils/priceToCurrency';
 
 import styles from './Cart.module.scss';
+import CartEmpty from './cart-empty/CartEmpty';
+import CartItem from './cart-item/CartItem';
 
 const Cart: FC = () => {
-	const { ref, isShow, setIsShow } = useOutside(false);
+	const [isShow, setIsShow] = useState(false);
+	const { cart, total } = useCart();
 
 	return (
-		<div className={styles.cart} ref={ref}>
+		<div className={styles.cart}>
 			<button className={styles.button} onClick={() => setIsShow(!isShow)}>
 				<MdOutlineShoppingCart size={25} />
-				<span>{priceToCurrency(1000)}</span>
+				<span>{priceToCurrency(total)}</span>
 			</button>
 
 			{isShow && (
@@ -23,7 +26,19 @@ const Cart: FC = () => {
 					open={isShow}
 					onClose={() => setIsShow(!isShow)}
 				>
-					<div>Cart</div>
+					<div className={styles.drawer}>
+						<div className={styles.top}>
+							<h1>Корзина</h1>
+							<button onClick={() => setIsShow(false)}>
+								<MdClose size={25} />
+							</button>
+						</div>
+						{cart.length ? (
+							cart.map(item => <CartItem key={item.id} item={item} />)
+						) : (
+							<CartEmpty />
+						)}
+					</div>
 				</Drawer>
 			)}
 		</div>

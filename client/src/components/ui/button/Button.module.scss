@@ -1,7 +1,16 @@
 .button {
-	@apply bg-green-100 rounded-2xl px-14 py-2 text-white transition-colors;
+	@apply rounded-2xl bg-green-100 px-14 py-2 text-white transition-colors;
 
 	&:hover {
 		@apply bg-green-200;
+	}
+
+	&.backLink {
+		@apply flex items-center;
+
+		> svg {
+			@apply mr-2;
+			display: inline;
+		}
 	}
 }
