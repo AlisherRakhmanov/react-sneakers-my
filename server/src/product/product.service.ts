@@ -57,7 +57,7 @@ export class ProductService {
 			title: dto.title,
 			slug: dto.slug,
 			price: dto.price,
-			image: dto.image
+			images: dto.images
 		});
 	}
 

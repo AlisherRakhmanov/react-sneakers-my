@@ -14,5 +14,5 @@ export class Product extends TimeStamps {
 	price: number;
 
 	@prop()
-	image: string;
+	images: string[];
 }
