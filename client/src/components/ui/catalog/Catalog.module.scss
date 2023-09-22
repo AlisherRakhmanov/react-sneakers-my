@@ -1,7 +1,7 @@
 .catalog {
-	@apply flex animate-fade flex-wrap justify-between gap-x-5 gap-y-10 pt-8;
+	@apply grid animate-fade grid-cols-5 gap-x-14 gap-y-10 pt-8;
 
 	.notfound {
-		@apply mt-10 text-3xl font-semibold;
+		@apply ml-auto mr-auto mt-10 text-3xl font-semibold;
 	}
 }
