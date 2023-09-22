@@ -1,7 +1,7 @@
 .catalog {
 	@apply grid animate-fade grid-cols-5 gap-x-14 gap-y-10 pt-8;
+}
 
-	.notfound {
-		@apply ml-auto mr-auto mt-10 text-3xl font-semibold;
-	}
+.notfound {
+	@apply mt-20 text-center text-3xl font-semibold;
 }

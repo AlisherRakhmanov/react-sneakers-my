@@ -1,0 +1,13 @@
+.slide {
+	@apply bg-beige relative flex h-80 items-center justify-between overflow-hidden rounded-3xl px-10;
+
+	.info {
+		> h3 {
+			@apply text-3xl font-bold;
+		}
+
+		> .button {
+			@apply mt-4 rounded-3xl px-16 py-3 text-xl;
+		}
+	}
+}

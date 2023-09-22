@@ -14,9 +14,11 @@ import storage from 'redux-persist/lib/storage';
 import { reducers } from './rootReducer';
 
 const persistConfig = {
-	key: 'root',
-	storage
+	key: 'cart',
+	storage,
+	whitelist: ['cart']
 };
+
 const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({

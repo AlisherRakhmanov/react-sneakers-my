@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Heading.module.scss';
 
 interface IHeading {
-	title: string;
+	title: string | undefined;
 	backLink?: boolean;
 }
 

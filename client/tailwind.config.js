@@ -8,6 +8,7 @@ export default {
 			'light-blue': '#E7F6FF',
 			white: colors.white,
 			black: colors.black,
+			beige: '#F4EFE9',
 			gray: {
 				100: '#C4C4C4',
 				200: '#9D9D9D',
