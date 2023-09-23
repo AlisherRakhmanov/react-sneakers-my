@@ -16,7 +16,7 @@ const Favorite: FC = () => {
 			<Helmet title='Избранное' />
 			<div className={styles.favorite}>
 				<Heading title='Избранное' backLink />
-				<Catalog products={favorites || []} />
+				<Catalog products={favorites || []} isLoading={isLoading} />
 			</div>
 		</Layout>
 	);

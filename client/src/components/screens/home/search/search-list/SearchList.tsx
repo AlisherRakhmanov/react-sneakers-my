@@ -14,7 +14,7 @@ const SearchList: FC<{ products: IProduct[] }> = ({ products }) => {
 				products.map(product => (
 					<Link to={getProductsUrl(product.slug)} className={styles.item}>
 						<img
-							src={product.image}
+							src={product.images[0]}
 							alt={product.title}
 							width={100}
 							height={100}

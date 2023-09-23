@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Layout from '../../layout/Layout';
 import Catalog from '../../ui/catalog/Catalog';
 import Heading from '../../ui/heading/Heading';
+import SkeletonLoader from '../../ui/skeleton-loader/SkeletonLoader';
 import Slider from '../../ui/slider/Slider';
 
 import styles from './Home.module.scss';
@@ -19,17 +20,22 @@ const Home: FC = () => {
 			<div className={styles.home}>
 				<Helmet title='Все кроссовки' />
 
-				{products?.length && <Slider slides={slides || []} />}
+				{isLoading ? (
+					<div>
+						<SkeletonLoader
+							count={1}
+							className='h-[300px] w-full rounded-3xl'
+						/>
+					</div>
+				) : (
+					<Slider slides={slides || []} />
+				)}
 
 				<div className={styles.top}>
 					<Heading title='Все кроссовки' />
 					<Search />
 				</div>
-				{isLoading ? (
-					<div>...Loading</div>
-				) : (
-					<Catalog products={products || []} />
-				)}
+				<Catalog products={products || []} isLoading={isLoading} />
 			</div>
 		</Layout>
 	);

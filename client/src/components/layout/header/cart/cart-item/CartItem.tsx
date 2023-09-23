@@ -6,6 +6,7 @@ import { ICartItem } from '../../../../../types/cart.types';
 import { priceToCurrency } from '../../../../../utils/priceToCurrency';
 
 import styles from './CartItem.module.scss';
+import CartActions from './cart-actions/CartActions';
 
 const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 	const { removeFromCart } = useActions();
@@ -17,10 +18,12 @@ const CartItem: FC<{ item: ICartItem }> = ({ item }) => {
 				alt={item.product.title}
 				width={70}
 				height={70}
+				draggable={false}
 			/>
 			<div className={styles.info}>
 				<h3>{item.product.title}</h3>
 				<p>{priceToCurrency(item.product.price)}</p>
+				<CartActions item={item} />
 			</div>
 			<button
 				className={styles.delete}

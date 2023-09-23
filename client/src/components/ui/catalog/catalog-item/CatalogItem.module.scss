@@ -25,10 +25,15 @@
 		> svg {
 			@apply fill-gray-300;
 		}
+
+		&:active {
+			@apply rounded-lg bg-gray-600;
+		}
 	}
 
 	.favorite {
 		@apply absolute left-6 top-3 p-1;
+
 		&.active {
 			> svg {
 				@apply fill-red;

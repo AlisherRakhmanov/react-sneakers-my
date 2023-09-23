@@ -26,7 +26,7 @@ const CatalogItem: FC<{ product: IProduct }> = ({ product }) => {
 		<div className={styles.item}>
 			<FavoriteButton productId={product._id} />
 
-			<Link to={getProductsUrl(product.slug)} relative='path'>
+			<Link to={getProductsUrl(product.slug)} relative='route'>
 				<img
 					src={product.images[0]}
 					alt={product.title}
@@ -44,7 +44,7 @@ const CatalogItem: FC<{ product: IProduct }> = ({ product }) => {
 				</div>
 
 				<button className={styles.plus} onClick={handleClickCart}>
-					{isExistInCart ? <MdCheck /> : <HiPlus size={20} />}
+					{isExistInCart ? <MdCheck size={20} /> : <HiPlus size={20} />}
 				</button>
 			</div>
 		</div>

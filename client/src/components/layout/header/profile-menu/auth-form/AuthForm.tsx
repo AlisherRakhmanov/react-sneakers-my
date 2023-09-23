@@ -48,12 +48,17 @@ const AuthForm: FC = () => {
 					/>
 
 					<div className={styles.buttons}>
-						<Button className='mt-3' onClick={() => setType('login')}>
+						<Button
+							className='mt-3'
+							onClick={() => setType('login')}
+							type='submit'
+						>
 							Войти
 						</Button>
 						<button
 							className={styles.button}
 							onClick={() => setType('register')}
+							type='submit'
 						>
 							Регистрация
 						</button>

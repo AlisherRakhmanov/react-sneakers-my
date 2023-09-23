@@ -25,5 +25,9 @@
 		> svg {
 			@apply fill-red;
 		}
+
+		&:active {
+			@apply rounded-2xl bg-gray-100 p-1;
+		}
 	}
 }

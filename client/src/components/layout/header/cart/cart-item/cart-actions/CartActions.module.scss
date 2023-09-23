@@ -1,0 +1,19 @@
+.action {
+	@apply flex items-center gap-2;
+	> input {
+		@apply rounded-xl bg-[#EEEEEE] text-center text-xl;
+		width: 50px;
+	}
+
+	> button {
+		@apply text-2xl;
+
+		&:active {
+			@apply rounded-2xl bg-gray-100 bg-opacity-25;
+		}
+	}
+
+	.disabled {
+		@apply text-gray-100;
+	}
+}
