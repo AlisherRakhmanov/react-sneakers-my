@@ -1,0 +1,16 @@
+.gallery {
+	> img {
+		@apply overflow-hidden;
+		width: 500px;
+		height: 600px;
+	}
+
+	.item {
+		@apply overflow-x-auto whitespace-nowrap;
+		width: 500px;
+
+		.button {
+			@apply mr-5 inline-block overflow-hidden rounded-lg border-b-2 border-solid transition-all duration-300 last:mr-0 hover:shadow-md;
+		}
+	}
+}

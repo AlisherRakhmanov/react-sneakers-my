@@ -12,23 +12,28 @@ const Slider: FC<{ slides: ISlide[] }> = ({ slides }) => {
 		slides.length
 	);
 	return (
-		<div className={styles.slider}>
-			<CSSTransition
-				in={slideIn}
-				classNames='slide-animation'
-				timeout={300}
-				unmountOnExit
-			>
-				<SlideItem slide={slides[index]} />
-			</CSSTransition>
+		slides && (
+			<div className={styles.slider}>
+				<CSSTransition
+					in={slideIn}
+					classNames='slide-animation'
+					timeout={300}
+					unmountOnExit
+				>
+					<SlideItem slide={slides[index]} />
+				</CSSTransition>
 
-			{isPrev && (
-				<SlideArrow variant='left' clickHandler={() => handleClick('prev')} />
-			)}
-			{isNext && (
-				<SlideArrow variant='right' clickHandler={() => handleClick('next')} />
-			)}
-		</div>
+				{isPrev && (
+					<SlideArrow variant='left' clickHandler={() => handleClick('prev')} />
+				)}
+				{isNext && (
+					<SlideArrow
+						variant='right'
+						clickHandler={() => handleClick('next')}
+					/>
+				)}
+			</div>
+		)
 	);
 };
 
